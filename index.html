@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INFIN8U</title>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu+Mono"/>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <script src="js/bootstrap.js"></script>
+        <style>
+            .row
+            {
+                padding-top:1em !important;
+            }
+            code
+            {
+                margin-left: 2%;
+                font-size:12px;
+            }
+            td
+            {
+                width: 200px;
+                margin: 1em;
+            }
+            .dot
+            {
+                position: absolute;
+                left: 50%;
+                height:50px;
+                width:50px;
+                margin-left: -25px;
+                border-radius:30px;
+            }
+            .dot-sm
+            {
+                margin: auto;
+                display: inline-block;
+                margin: 2px;
+                margin-top: 10px;
+                width:  20px;
+                height: 20px;
+                border-radius:100%;
+            }
+            .dot-red
+            {
+                background-color:#c0504d;
+            }
+            .dot-blue
+            {
+                background-color: #4f81bd;
+            }
+            .dot-disabled
+            {
+                opacity: 0.5;
+            }
+            .timeline
+            {
+                padding: 20px 0 20px;
+                list-style: none;
+                position: relative;
+                display: flow-root;
+            }
+            .timeline::before
+            {
+                top: 0;
+                bottom: 0;
+                position: absolute; 
+                content: " ";
+                margin:auto;
+                width: 3px;
+                background-color: #c0504d;
+                left: 50%;
+                margin-left: -1.5px;
+            }
+            .timeline > li
+            {
+                overflow: hidden;
+            }
+            .card::after
+            {
+                position: absolute;
+                top:10%;
+                right: -14px;
+                display: inline-block;
+                border-top: 14px solid transparent;
+                border-left: 14px solid #c0504d;
+                border-bottom: 14px solid transparent;
+                content: " ";
+                box-shadow: 2px;
+            }
+            .card-inverted
+            {
+             float:right;   
+            }
+            .card-inverted::after
+            {
+                position: absolute;
+                top:10%;
+                right:inherit;
+                left: -14px;
+                display: inline-block;
+                border-top: 14px solid transparent;
+                border-right: 14px solid #c0504d;
+                border-left: 0px solid transparent;
+                border-bottom: 14px solid transparent;
+                content: " ";
+                box-shadow: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container shadow-lg"
+             style="width:80%;height:fit-content;margin:auto;margin-top:10vh;padding:2rem;">
+            <div class="row">
+                <span style="font-size:42px;margin:auto;color:#592525;"><b>Anas Elmoutaouakil</b></span>
+            </div>
+                <div class="row">
+                    <span class="" style="margin:auto;font-size:21px;color:#a6633c;"><b>Programmeur;</b></span>
+                </div>
+            <div class="row">
+                <span style="width:40%;margin:auto;text-align:middle;text-align:center">
+                    22 ans | Marocain | célibataire<br> Tel : (212) 626738885 | Email: <a href="mailto:anas.elmoutaouakil@gmail.com">anas.elmoutaouakil@gmail.com</a> Adresse : Rue Mellilia imm MZIBAR N°2 Asilah, Maroc 
+                </span>
+            </div>
+            <div class="row" style="margin-top:2%;">
+                <div class="col-sm-4">
+                    <div style="height:50%;border-bottom:5px #a6633c dashed;"></div>
+                </div><div class="col-sm-4">
+                    <button class="btn" style="width:100%;background-color:#a6633c;color:#fff;opacity:1;" disabled>
+                        <span style="font-size:24px;"><b>Education</b></span>
+                </button>
+                </div><div class="col-sm-4">
+                
+                    <div style="height:50%;border-bottom:5px #a6633c dashed"></div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:2%;">
+                <div class="col-sm-4">
+                    <span style="margin:auto;display:table;text-align:center;">
+                        <span style="color:#a6633c;font-size:24px;">Diplôme de développement informatique</span> <br>ISMONTIC<br>Tanger, Maroc<br>2016 </span>
+                </div>
+                <div class="col-sm-4"></div>
+                 <div class="col-sm-4">
+                    <span style="margin:auto;display:table;text-align:center;">
+                        <span style="color:#a6633c;font-size:24px;">Baccalauréat science  physique</span><br> Oued Eddahab<br>Assilah Maroc <br>2014 </span>
+                </div>
+            </div>
+             <div class="row" style="margin-top:2%;">
+                <div class="col-sm-4">
+                    <div style="height:50%;border-bottom:5px #c0504d dashed;"></div>
+                </div><div class="col-sm-4">
+                    <button class="btn" style="width:100%;background-color:#c0504d;color:#fff;opacity:1;" disabled>
+                        <span style="font-size:24px;"><b>Experience</b></span>
+                </button>
+                </div><div class="col-sm-4">
+                
+                    <div style="height:50%;border-bottom:5px #c0504d dashed"></div>
+                </div>
+            </div>
+            <div class="row" style="display:inherit;"
+                 >
+             <ul class="timeline">
+                <li>
+                <div class="dot dot-red"></div>
+                    <div class="card shadow" style="width:45%;">
+                <span class="card-body">
+                    <label class="card-title" style="color:#d99594;font-size:20px;"><b>Stage</b></label><br> STILL Développement <br><span class="text-muted">Rabat</span>  
+                </span>
+                        <div class="card-footer text-muted">
+                        <span style="margin:auto;display:table;">2016</span></div>
+                        </div>
+                    </li>
+                  <li >
+                <div class="dot dot-red"></div>
+                    <div class="card shadow card-inverted" style="width:45%;">
+                <span class="card-body">
+                    <label class="card-title" style="color:#d99594;font-size:20px;"><b>Agent</b></label><br> SOM Consulting <br><span class="text-muted">Tangier</span>  
+                </span>
+                        <div class="card-footer text-muted">
+                        <span style="margin:auto;display:table;">2017</span></div>
+                        </div>
+                    </li>
+                 <li>
+                <div class="dot dot-red"></div>
+                    <div class="card shadow" style="width:45%;">
+                <span class="card-body">
+                    <label class="card-title" style="color:#d99594;font-size:20px;"><b>Projet Personnel</b></label><br> Creation d'une application Android Globbik (Resau Social) <code>[JAVA,PHP,MYSQL]</code>
+                </span>
+                        <div class="card-footer text-muted">
+                        <span style="margin:auto;display:table;">2018</span></div>
+                        </div>
+                    </li>
+                </ul>
+                </div> <div class="row" style="margin-top:2%;">
+                <div class="col-sm-4">
+                    <div style="height:50%;border-bottom:5px #4f81bd dashed;"></div>
+                </div><div class="col-sm-4">
+                    <button class="btn" style="width:100%;background-color:#4f81bd;color:#fff;opacity:1;" disabled>
+                        <span style="font-size:24px;"><b>Competences</b></span>
+                </button>
+                </div><div class="col-sm-4">
+                
+                    <div style="height:50%;border-bottom:5px #4f81bd dashed"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <span style="color:#90b5e2;display:table;margin:auto;font-size:24px;"><b>Professionnel</b></span>
+                    <table class="table-borderless">
+                        <tr><td>Microsoft office </td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue dot-disabled"></div></td></tr>
+                        
+                        <tr><td>Programmation<code>C#
+C,C++,Python,Ruby,Java </code></td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div></td></tr>
+                        
+                         <tr><td>Réseau<br></td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue dot-disabled"></div></td></tr>
+                        <tr><td>Electroniques<code>Arduino</code><br></td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue dot-disabled"></div><div class="dot-sm dot-blue dot-disabled"></div></td></tr> <tr><td>Analyse<code>UML</code><br></td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue dot-disabled"></div></td></tr>
+                        <tr><td>Bade de donneés<code>SQL</code><br></td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue dot-disabled"></div></td></tr><tr><td>Web<code>PHP, ASP.NET, HTML, CSS, JavaScript</code><br></td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue dot-disabled"></div></td></tr>
+                    </table>
+                </div>
+                <div class="col-sm-4">
+                     <span style="color:#90b5e2;display:table;margin:auto;font-size:24px;"><b>Liés</b></span>
+                    <table class="table-borderless">
+                        <tr><td>Conception</td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue dot-disabled"></div></td></tr><tr><td>Édition d'image</td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue dot-disabled"></div><div class="dot-sm dot-blue dot-disabled"></div></td></tr><tr><td>Windows</td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue  "></div><div class="dot-sm dot-blue"></div></td></tr><tr><td>Linux</td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue dot-disabled"></div><div class="dot-sm dot-blue dot-disabled"></div></td></tr><tr><td>Maintenance</td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue dot-disabled"></div><div class="dot-sm dot-blue dot-disabled"></div></td></tr><tr><td>Orienté Objet</td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div></td></tr><tr><td>Socket Programming</td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue dot-disabled"></div><div class="dot-sm dot-blue dot-disabled"></div></td></tr><tr><td>Multi-Threading</td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue dot-disabled"></div></td></tr>
+                    </table>
+                </div>
+                 
+                <div class="col-sm-4">
+                <span style="color:#90b5e2;display:table;margin:auto;font-size:24px;"><b>Personnel</b></span>
+                    <table class="table-borderless">
+                        <tr><td>Autonome</td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue dot-disabled"></div></td></tr><tr><td>Délicat</td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue "></div></td></tr><tr><td>Discipliné</td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue  "></div><div class="dot-sm dot-blue"></div></td></tr><tr><td>Dynamique</td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue dot-disabled"></div></td></tr><tr><td>Innovateur</td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div></td></tr><tr><td>Volontaire</td><td>
+                            <div class="dot-sm dot-blue"></div>
+                            <div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div><div class="dot-sm dot-blue"></div></td></tr>
+                    </table></div>
+            </div>
+             <div class="row" style="margin-top:2%;">
+                <div class="col-sm-4">
+                    <div style="height:50%;border-bottom:5px #4f81bd dashed;"></div>
+                </div><div class="col-sm-4">
+                    <button class="btn" style="width:100%;background-color:#4f81bd;color:#fff;opacity:1;" disabled>
+                        <span style="font-size:24px;"><b>Autre</b></span>
+                </button>
+                </div><div class="col-sm-4">
+                
+                    <div style="height:50%;border-bottom:5px #4f81bd dashed"></div>
+                </div>
+            </div>
+            
+            <div class="row" >
+                <div class="col-sm-6" style="font-size:18px;"><span style="color:#90b5e2"><b>Langues :</b></span><span> Arabe, Français et Anglais </span></div>
+                <div class="col-sm-6" style="font-size:18px;"><span style="color:#90b5e2"><b>Divers :</b></span><span> Sport, Lecture, Jeux Vidéos, Music, Voyage </span></div>
+            </div>
+        </div>
+    </body>
+    <footer>
+    
+    </footer>
+</html>
