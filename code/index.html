@@ -1,0 +1,91 @@
+</<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PopUpMenu.java</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu+Mono"/>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/quicklight.css"/>
+            <script src="../js/jquery-3.3.1.js"></script>
+            <script src="../js/bootstrap.js"></script>
+            <script src="../js/quicklight.js"></script>
+
+            <script src="../js/bootstrap.js"></script>
+            <script>
+            $(document).ready(function()
+          {
+            urlParams = new URLSearchParams(window.location.search);
+            var file = urlParams.get('f');
+            console.log(file);
+            if(file != null)
+            {
+              $("#pre1").text(LoadCode(file));
+              $("#title").text(file);
+              $(".active").removeClass("active");
+              var selector = "#"+file.split('.')[0];
+              console.log(selector);
+             $(selector).addClass("active");
+              LoadArrays();
+              DoHighlight();
+              UnloadArrays();
+            }
+          });
+              function LoadCode(file)
+              {
+                  var rawFile = new XMLHttpRequest();
+                  var txt = "Error loading!";
+                  rawFile.open("GET", file, false);
+                  rawFile.onreadystatechange = function ()
+                  {
+                    if(rawFile.readyState === 4)
+                    {
+                      if(rawFile.status === 200 || rawFile.status == 0)
+                      {
+                        txt = rawFile.responseText;
+                      }
+                    }
+                  }
+                  rawFile.send(null);
+                  return txt;
+              }
+            </script>
+<style>
+  .list-group-item
+  {
+    background-color:#1E1E23;
+    color:white;
+  }
+  .active
+  {
+    background-color:#9CF828 !important;
+    border:none;
+    color:#1E1E23 !important;
+  }
+</style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="alert alert-warning col-12">
+        <span>This Page is under construction!</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <ul class="list-group" style="height:100%;background-color:#181826;overflow-y:overflow">
+          <a id="PopUpMenu" href="?f=PopUpMenu.java"  class="list-group-item list-group-item-action">PopUpMenu</a>
+          <a id="FPSLooper" href="?f=FPSLooper.java" class="list-group-item list-group-item-action">FPSLooper</a>
+          <a id="Behavior" href="?f=Behavior.java" class="list-group-item list-group-item-action">Behavior</a>
+          <a id="ViewMeasureProperty" href="?f=ViewMeasureProperty.java" class="list-group-item list-group-item-action">ViewMeasureProperty</a>
+          <a id="PopUpMenuItem" href="?f=PopUpMenuItem.java" class="list-group-item list-group-item-action">PopUpMenuItem</a>
+        </ul>
+      </div>
+      <div class="col-10">
+        <h1 id="title"></h1>
+        <pre id="pre1" class="rounded">
+          <span>
+          </span>
+        </pre>
+      </div>
+    </div>
+  </body>
+</html>
